@@ -18,16 +18,16 @@ if (!empty($item['alternates'])) {
   }
 }
 
-if ($item['priority'] !== null) {
-  echo "\t\t" . '<priority>' . $item['priority'] . '</priority>' . "\n";
-}
-
 if ($item['lastmod'] !== null) {
   echo "\t\t" . '<lastmod>' . date('Y-m-d\TH:i:sP', strtotime($item['lastmod'])) . '</lastmod>' . "\n";
 }
 
 if ($item['freq'] !== null) {
   echo "\t\t" . '<changefreq>' . $item['freq'] . '</changefreq>' . "\n";
+}
+
+if ($item['priority'] !== null) {
+  echo "\t\t" . '<priority>' . $item['priority'] . '</priority>' . "\n";
 }
 
 if (!empty($item['images'])) {
